@@ -1,0 +1,195 @@
+<robot name="packo">
+    <!-- link: right_front_wheel -->
+    <link name="right_front_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_front_wheel -->
+    <link name="left_front_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: right_back_wheel -->
+    <link name="right_back_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_back_wheel -->
+    <link name="left_back_wheel">
+        <visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: base -->
+    <link name="base">
+        <visual>
+            <geometry>
+                <box size="0.5 0.5 0.02" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.5 0.02" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: right_wall -->
+    <link name="right_wall">
+        <visual>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_wall -->
+    <link name="left_wall">
+        <visual>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: back_wall -->
+    <link name="back_wall">
+        <visual>
+            <geometry>
+                <box size="0.02 0.46 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.46 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_wall -->
+    <link name="top_wall">
+        <visual>
+            <geometry>
+                <box size="0.48 0.46 0.02" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.48 0.46 0.02" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: base_link -->
+    <link name="base_link" />
+    <joint name="base_link_to_base" type="fixed">
+        <origin xyz="0 0 0.06" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="base" />
+    </joint>
+
+    <!-- joint: base -> right_front_wheel -->
+    <joint name="base_to_right_front_wheel" type="continuous">
+        <origin xyz="0.2 0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_front_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> right_back_wheel -->
+    <joint name="base_to_right_back_wheel" type="continuous">
+        <origin xyz="0.2 -0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_back_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> left_front_wheel -->
+    <joint name="base_to_left_front_wheel" type="continuous">
+        <origin xyz="-0.2 0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_front_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> left_back_wheel -->
+    <joint name="base_to_left_back_wheel" type="continuous">
+        <origin xyz="-0.2 -0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_back_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> right_wall -->
+    <joint name="base_to_right_wall" type="fixed">
+        <origin xyz="0 0.24 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_wall" />
+    </joint>
+
+    <!-- joint: base -> left_wall -->
+    <joint name="base_to_left_wall" type="fixed">
+        <origin xyz="0 -0.24 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_wall" />
+    </joint>
+
+    <!-- joint: base -> back_wall -->
+    <joint name="base_to_back_wall" type="fixed">
+        <origin xyz="-0.24 0 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="back_wall" />
+    </joint>
+
+    <!-- joint: base -> top_wall -->
+    <joint name="base_to_top_wall" type="fixed">
+        <origin xyz="0.01 0 0.78" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_wall" />
+    </joint>
+</robot>
