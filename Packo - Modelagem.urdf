@@ -125,6 +125,20 @@
         </collision>
     </link>
 
+    <!-- link: front_cover -->
+    <link name="front_cover">
+        <visual>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </collision>
+    </link>
+
     <!-- link: bottom_drawer -->
     <link name="bottom_drawer">
         <visual>
@@ -237,20 +251,6 @@
         </collision>
     </link>
 
-    <!-- link: front_cover -->
-    <link name="front_cover">
-        <visual>
-            <geometry>
-                <box size="0.02 0.46 0.1825" />
-            </geometry>
-        </visual>
-        <collision>
-            <geometry>
-                <box size="0.02 0.46 0.1825" />
-            </geometry>
-        </collision>
-    </link>
-
     <!-- link: bottom_drawer_door -->
     <link name="bottom_drawer_door">
         <visual>
@@ -307,16 +307,30 @@
         </collision>
     </link>
 
-    <!-- link: measurer -->
-    <link name="measurer">
+    <!-- link: screen_base -->
+    <link name="screen_base">
         <visual>
             <geometry>
-                <sphere radius="0.005" />
+                <cylinder length=".05" radius="0.22"/>
             </geometry>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="0.005" />
+                <cylinder length=".05" radius="0.22"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: screen -->
+    <link name="screen">
+        <visual>
+            <geometry>
+                <box size="0.01 0.2 0.1" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.2 0.1" />
             </geometry>
         </collision>
     </link>
@@ -387,6 +401,13 @@
         <origin xyz="0.01 0 0.78" rpy="0 0 0" />
         <parent link="base" />
         <child link="top_wall" />
+    </joint>
+
+    <!-- joint: base -> front_cover -->
+    <joint name="base_to_front_cover" type="fixed">
+        <origin xyz="0.24 0 0.10125" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="front_cover" />
     </joint>
 
     <!-- joint: base -> bottom_drawer -->
@@ -477,10 +498,18 @@
         <child link="top_left_drawer_door" />
     </joint>
 
-    <!-- joint: base -> front_cover -->
-    <joint name="base_to_front_cover" type="fixed">
-        <origin xyz="0.24 0 0.10125" rpy="0 0 0" />
-        <parent link="base" />
-        <child link="front_cover" />
+    <!-- joint: top_wall -> screen_base -->
+    <joint name="top_wall_to_screen_base" type="continuous">
+        <origin xyz="0 0 0.02" rpy="0 0 0" />
+        <parent link="top_wall" />
+        <child link="screen_base" />
+        <axis xyz="0 0 1" />
+    </joint>
+    
+    <!-- joint: screen_base -> screen -->
+    <joint name="screen_base_to_screen" type="fixed">
+        <origin xyz="0.20 0 0.07" rpy="0 -0.35 0" />
+        <parent link="screen_base" />
+        <child link="screen" />
     </joint>
 </robot>
