@@ -125,6 +125,202 @@
         </collision>
     </link>
 
+    <!-- link: bottom_drawer -->
+    <link name="bottom_drawer">
+        <visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer -->
+    <link name="middle_drawer">
+        <visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_drawer -->
+    <link name="top_drawer">
+        <visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_drawer_divider -->
+    <link name="top_drawer_divider">
+        <visual>
+            <geometry>
+                <box size="0.47 0.01 0.1925" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.01 0.1925" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: bottom_drawer_hinge -->
+    <link name="bottom_drawer_hinge">
+        <visual>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer_hinge -->
+    <link name="middle_drawer_hinge">
+        <visual>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_right_drawer_hinge -->
+    <link name="top_right_drawer_hinge">
+        <visual>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_left_drawer_hinge -->
+    <link name="top_left_drawer_hinge">
+        <visual>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: front_cover -->
+    <link name="front_cover">
+        <visual>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: bottom_drawer_door -->
+    <link name="bottom_drawer_door">
+        <visual>
+            <geometry>
+                <box size="0.01 0.1825 0.46" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1825 0.46" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer_door -->
+    <link name="middle_drawer_door">
+        <visual>
+            <geometry>
+                <box size="0.01 0.187 0.46" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.187 0.46" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_right_drawer_door -->
+    <link name="top_right_drawer_door">
+        <visual>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_left_drawer_door -->
+    <link name="top_left_drawer_door">
+        <visual>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: measurer -->
+    <link name="measurer">
+        <visual>
+            <geometry>
+                <sphere radius="0.005" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.005" />
+            </geometry>
+        </collision>
+    </link>
+
     <!-- link: base_link -->
     <link name="base_link" />
     <joint name="base_link_to_base" type="fixed">
@@ -191,5 +387,100 @@
         <origin xyz="0.01 0 0.78" rpy="0 0 0" />
         <parent link="base" />
         <child link="top_wall" />
+    </joint>
+
+    <!-- joint: base -> bottom_drawer -->
+    <joint name="base_to_bottom_drawer" type="fixed">
+        <origin xyz="0 0 0.1975" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="bottom_drawer" />
+    </joint>
+
+    <!-- joint: base -> middle_drawer -->
+    <joint name="base_to_middle_drawer" type="fixed">
+        <origin xyz="0 0 0.385" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="middle_drawer" />
+    </joint>
+
+    <!-- joint: base -> top_drawer -->
+    <joint name="base_to_top_drawer" type="fixed">
+        <origin xyz="0 0 0.5775" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_drawer" />
+    </joint>
+
+    <!-- joint: base -> top_drawer_divider -->
+    <joint name="base_to_top_drawer_divider" type="fixed">
+        <origin xyz="0 0 0.67375" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_drawer_divider" />
+    </joint>
+
+    <!-- joint: bottom_drawer -> bottom_drawer_hinge -->
+    <joint name="bottom_drawer_to_bottom_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0 0" rpy="1.57 0 0" />
+        <parent link="bottom_drawer" />
+        <child link="bottom_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: middle_drawer -> middle_drawer_hinge -->
+    <joint name="middle_drawer_to_middle_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0 0" rpy="1.57 0 0" />
+        <parent link="middle_drawer" />
+        <child link="middle_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: top_drawer -> top_right_drawer_hinge -->
+    <joint name="top_drawer_to_top_right_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0.1175 0" rpy="1.57 0 0" />
+        <parent link="top_drawer" />
+        <child link="top_right_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: top_drawer -> top_left_drawer_hinge -->
+    <joint name="top_drawer_to_top_left_drawer_hinge" type="continuous">
+        <origin xyz="0.23 -0.1175 0" rpy="1.57 0 0" />
+        <parent link="top_drawer" />
+        <child link="top_left_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: bottom_drawer_hinge -> bottom_drawer_door -->
+    <joint name="bottom_drawer_hinge_to_bottom_drawer_door" type="fixed">
+        <origin xyz="0 0.08625 0" rpy="0 0 0" />
+        <parent link="bottom_drawer_hinge" />
+        <child link="bottom_drawer_door" />
+    </joint>
+
+    <!-- joint: middle_drawer_hinge -> middle_drawer_door -->
+    <joint name="middle_drawer_hinge_to_middle_drawer_door" type="fixed">
+        <origin xyz="0 0.091 0" rpy="0 0 0" />
+        <parent link="middle_drawer_hinge" />
+        <child link="middle_drawer_door" />
+    </joint>
+
+    <!-- joint: top_right_drawer_hinge -> top_right_drawer_door -->
+    <joint name="top_right_drawer_hinge_to_top_right_drawer_door" type="fixed">
+        <origin xyz="0 0.0935 0" rpy="0 0 0" />
+        <parent link="top_right_drawer_hinge" />
+        <child link="top_right_drawer_door" />
+    </joint>
+
+    <!-- joint: top_left_drawer_hinge -> top_left_drawer_door -->
+    <joint name="top_left_drawer_hinge_to_top_left_drawer_door" type="fixed">
+        <origin xyz="0 0.0935 0" rpy="0 0 0" />
+        <parent link="top_left_drawer_hinge" />
+        <child link="top_left_drawer_door" />
+    </joint>
+
+    <!-- joint: base -> front_cover -->
+    <joint name="base_to_front_cover" type="fixed">
+        <origin xyz="0.24 0 0.10125" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="front_cover" />
     </joint>
 </robot>
