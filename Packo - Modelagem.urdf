@@ -1,7 +1,14 @@
 <robot name="packo">
     <!-- link: right_front_wheel -->
     <link name="right_front_wheel">
-        <visual>
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
             <geometry>
                 <sphere radius="0.05" />
             </geometry>
@@ -15,7 +22,14 @@
 
     <!-- link: left_front_wheel -->
     <link name="left_front_wheel">
-        <visual>
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
             <geometry>
                 <sphere radius="0.05" />
             </geometry>
@@ -29,7 +43,14 @@
 
     <!-- link: right_back_wheel -->
     <link name="right_back_wheel">
-        <visual>
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
             <geometry>
                 <sphere radius="0.05" />
             </geometry>
@@ -43,7 +64,14 @@
 
     <!-- link: left_back_wheel -->
     <link name="left_back_wheel">
-        <visual>
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
             <geometry>
                 <sphere radius="0.05" />
             </geometry>
@@ -57,7 +85,14 @@
 
     <!-- link: base -->
     <link name="base">
-        <visual>
+        <inertial>
+            <mass value="5"/>
+            <inertia
+                ixx="0.10417" ixy="0.0" ixz="0.0"
+                iyy="0.10417" iyz="0.0"
+                izz="0.10417"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.5 0.5 0.02" />
             </geometry>
@@ -71,7 +106,14 @@
 
     <!-- link: right_wall -->
     <link name="right_wall">
-        <visual>
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.5 0.02 0.78" />
             </geometry>
@@ -85,7 +127,14 @@
 
     <!-- link: left_wall -->
     <link name="left_wall">
-        <visual>
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.5 0.02 0.78" />
             </geometry>
@@ -99,7 +148,14 @@
 
     <!-- link: back_wall -->
     <link name="back_wall">
-        <visual>
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.02 0.46 0.78" />
             </geometry>
@@ -113,7 +169,14 @@
 
     <!-- link: top_wall -->
     <link name="top_wall">
-        <visual>
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.48 0.46 0.02" />
             </geometry>
@@ -127,7 +190,14 @@
 
     <!-- link: front_cover -->
     <link name="front_cover">
-        <visual>
+        <inertial>
+            <mass value="0.2"/>
+            <inertia
+                ixx="0.00042" ixy="0.0" ixz="0.0"
+                iyy="0.00042" iyz="0.0"
+                izz="0.00042"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.02 0.46 0.1825" />
             </geometry>
@@ -141,7 +211,14 @@
 
     <!-- link: bottom_drawer -->
     <link name="bottom_drawer">
-        <visual>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.47 0.46 0.01" />
             </geometry>
@@ -155,7 +232,14 @@
 
     <!-- link: middle_drawer -->
     <link name="middle_drawer">
-        <visual>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.47 0.46 0.01" />
             </geometry>
@@ -169,7 +253,14 @@
 
     <!-- link: top_drawer -->
     <link name="top_drawer">
-        <visual>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.47 0.46 0.01" />
             </geometry>
@@ -183,7 +274,14 @@
 
     <!-- link: top_drawer_divider -->
     <link name="top_drawer_divider">
-        <visual>
+        <inertial>
+            <mass value="0.2"/>
+            <inertia
+                ixx="0.00042" ixy="0.0" ixz="0.0"
+                iyy="0.00042" iyz="0.0"
+                izz="0.00042"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.47 0.01 0.1925" />
             </geometry>
@@ -197,7 +295,14 @@
 
     <!-- link: bottom_drawer_hinge -->
     <link name="bottom_drawer_hinge">
-        <visual>
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
             <geometry>
                 <cylinder length=".46" radius="0.01"/>
             </geometry>
@@ -211,7 +316,14 @@
 
     <!-- link: middle_drawer_hinge -->
     <link name="middle_drawer_hinge">
-        <visual>
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
             <geometry>
                 <cylinder length=".46" radius="0.01"/>
             </geometry>
@@ -225,7 +337,14 @@
 
     <!-- link: top_right_drawer_hinge -->
     <link name="top_right_drawer_hinge">
-        <visual>
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
             <geometry>
                 <cylinder length=".225" radius="0.01"/>
             </geometry>
@@ -239,7 +358,14 @@
 
     <!-- link: top_left_drawer_hinge -->
     <link name="top_left_drawer_hinge">
-        <visual>
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
             <geometry>
                 <cylinder length=".225" radius="0.01"/>
             </geometry>
@@ -253,7 +379,14 @@
 
     <!-- link: bottom_drawer_door -->
     <link name="bottom_drawer_door">
-        <visual>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.01 0.1825 0.46" />
             </geometry>
@@ -267,7 +400,14 @@
 
     <!-- link: middle_drawer_door -->
     <link name="middle_drawer_door">
-        <visual>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.01 0.187 0.46" />
             </geometry>
@@ -281,7 +421,14 @@
 
     <!-- link: top_right_drawer_door -->
     <link name="top_right_drawer_door">
-        <visual>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.01 0.1975 0.225" />
             </geometry>
@@ -295,7 +442,14 @@
 
     <!-- link: top_left_drawer_door -->
     <link name="top_left_drawer_door">
-        <visual>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.01 0.1975 0.225" />
             </geometry>
@@ -309,7 +463,14 @@
 
     <!-- link: screen_base -->
     <link name="screen_base">
-        <visual>
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.01"/>
+        </inertial>
+<visual>
             <geometry>
                 <cylinder length=".05" radius="0.22"/>
             </geometry>
@@ -323,7 +484,14 @@
 
     <!-- link: screen -->
     <link name="screen">
-        <visual>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
             <geometry>
                 <box size="0.01 0.2 0.1" />
             </geometry>
