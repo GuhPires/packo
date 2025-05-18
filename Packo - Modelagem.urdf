@@ -86,11 +86,11 @@
     <!-- link: base -->
     <link name="base">
         <inertial>
-            <mass value="5"/>
+            <mass value="10"/>
             <inertia
-                ixx="0.10417" ixy="0.0" ixz="0.0"
-                iyy="0.10417" iyz="0.0"
-                izz="0.10417"/>
+                ixx="0.01666" ixy="0.0" ixz="0.0"
+                iyy="0.01666" iyz="0.0"
+                izz="0.01666"/>
         </inertial>
 <visual>
             <geometry>
@@ -464,11 +464,11 @@
     <!-- link: screen_base -->
     <link name="screen_base">
         <inertial>
-            <mass value="2"/>
+            <mass value="0.2"/>
             <inertia
-                ixx="0.0" ixy="0.0" ixz="0.0"
-                iyy="0.0" iyz="0.0"
-                izz="0.01"/>
+                ixx="0.000341" ixy="0.0" ixz="0.0"
+                iyy="0.000341" iyz="0.0"
+                izz="0.0002"/>
         </inertial>
 <visual>
             <geometry>
@@ -680,4 +680,14 @@
         <parent link="screen_base" />
         <child link="screen" />
     </joint>
+
+    <gazebo>
+        <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <odometryRate>20.0</odometryRate>
+            <robotBaseFrame>base_link</robotBaseFrame>
+        </plugin>
+    </gazebo>
 </robot>
