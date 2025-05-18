@@ -1,0 +1,693 @@
+<robot name="packo">
+    <!-- link: right_front_wheel -->
+    <link name="right_front_wheel">
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_front_wheel -->
+    <link name="left_front_wheel">
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: right_back_wheel -->
+    <link name="right_back_wheel">
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_back_wheel -->
+    <link name="left_back_wheel">
+        <inertial>
+            <mass value="2"/>
+            <inertia
+                ixx="0.002" ixy="0.0" ixz="0.0"
+                iyy="0.002" iyz="0.0"
+                izz="0.002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: base -->
+    <link name="base">
+        <inertial>
+            <mass value="10"/>
+            <inertia
+                ixx="0.01666" ixy="0.0" ixz="0.0"
+                iyy="0.01666" iyz="0.0"
+                izz="0.01666"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.5 0.5 0.02" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.5 0.02" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: right_wall -->
+    <link name="right_wall">
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: left_wall -->
+    <link name="left_wall">
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.5 0.02 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: back_wall -->
+    <link name="back_wall">
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.02 0.46 0.78" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.46 0.78" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_wall -->
+    <link name="top_wall">
+        <inertial>
+            <mass value="0.4"/>
+            <inertia
+                ixx="0.00083" ixy="0.0" ixz="0.0"
+                iyy="0.00083" iyz="0.0"
+                izz="0.00083"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.48 0.46 0.02" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.48 0.46 0.02" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: front_cover -->
+    <link name="front_cover">
+        <inertial>
+            <mass value="0.2"/>
+            <inertia
+                ixx="0.00042" ixy="0.0" ixz="0.0"
+                iyy="0.00042" iyz="0.0"
+                izz="0.00042"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.46 0.1825" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: bottom_drawer -->
+    <link name="bottom_drawer">
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer -->
+    <link name="middle_drawer">
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_drawer -->
+    <link name="top_drawer">
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.46 0.01" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_drawer_divider -->
+    <link name="top_drawer_divider">
+        <inertial>
+            <mass value="0.2"/>
+            <inertia
+                ixx="0.00042" ixy="0.0" ixz="0.0"
+                iyy="0.00042" iyz="0.0"
+                izz="0.00042"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.47 0.01 0.1925" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.47 0.01 0.1925" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: bottom_drawer_hinge -->
+    <link name="bottom_drawer_hinge">
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer_hinge -->
+    <link name="middle_drawer_hinge">
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".46" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_right_drawer_hinge -->
+    <link name="top_right_drawer_hinge">
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_left_drawer_hinge -->
+    <link name="top_left_drawer_hinge">
+        <inertial>
+            <mass value="0.005"/>
+            <inertia
+                ixx="0.0" ixy="0.0" ixz="0.0"
+                iyy="0.0" iyz="0.0"
+                izz="0.00002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".225" radius="0.01"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: bottom_drawer_door -->
+    <link name="bottom_drawer_door">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.01 0.1825 0.46" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1825 0.46" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: middle_drawer_door -->
+    <link name="middle_drawer_door">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.01 0.187 0.46" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.187 0.46" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_right_drawer_door -->
+    <link name="top_right_drawer_door">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: top_left_drawer_door -->
+    <link name="top_left_drawer_door">
+        <inertial>
+            <mass value="0.05"/>
+            <inertia
+                ixx="0.0001" ixy="0.0" ixz="0.0"
+                iyy="0.0001" iyz="0.0"
+                izz="0.0001"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1975 0.225" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: screen_base -->
+    <link name="screen_base">
+        <inertial>
+            <mass value="0.2"/>
+            <inertia
+                ixx="0.000341" ixy="0.0" ixz="0.0"
+                iyy="0.000341" iyz="0.0"
+                izz="0.0002"/>
+        </inertial>
+<visual>
+            <geometry>
+                <cylinder length=".05" radius="0.22"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length=".05" radius="0.22"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: screen -->
+    <link name="screen">
+        <inertial>
+            <mass value="0.1"/>
+            <inertia
+                ixx="0.00021" ixy="0.0" ixz="0.0"
+                iyy="0.00021" iyz="0.0"
+                izz="0.00021"/>
+        </inertial>
+<visual>
+            <geometry>
+                <box size="0.01 0.2 0.1" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.2 0.1" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link: base_link -->
+    <link name="base_link" />
+    <joint name="base_link_to_base" type="fixed">
+        <origin xyz="0 0 0.06" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="base" />
+    </joint>
+
+    <!-- joint: base -> right_front_wheel -->
+    <joint name="base_to_right_front_wheel" type="continuous">
+        <origin xyz="0.2 0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_front_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> right_back_wheel -->
+    <joint name="base_to_right_back_wheel" type="continuous">
+        <origin xyz="0.2 -0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_back_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> left_front_wheel -->
+    <joint name="base_to_left_front_wheel" type="continuous">
+        <origin xyz="-0.2 0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_front_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> left_back_wheel -->
+    <joint name="base_to_left_back_wheel" type="continuous">
+        <origin xyz="-0.2 -0.2 -0.01" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_back_wheel" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: base -> right_wall -->
+    <joint name="base_to_right_wall" type="fixed">
+        <origin xyz="0 0.24 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="right_wall" />
+    </joint>
+
+    <!-- joint: base -> left_wall -->
+    <joint name="base_to_left_wall" type="fixed">
+        <origin xyz="0 -0.24 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="left_wall" />
+    </joint>
+
+    <!-- joint: base -> back_wall -->
+    <joint name="base_to_back_wall" type="fixed">
+        <origin xyz="-0.24 0 0.4" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="back_wall" />
+    </joint>
+
+    <!-- joint: base -> top_wall -->
+    <joint name="base_to_top_wall" type="fixed">
+        <origin xyz="0.01 0 0.78" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_wall" />
+    </joint>
+
+    <!-- joint: base -> front_cover -->
+    <joint name="base_to_front_cover" type="fixed">
+        <origin xyz="0.24 0 0.10125" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="front_cover" />
+    </joint>
+
+    <!-- joint: base -> bottom_drawer -->
+    <joint name="base_to_bottom_drawer" type="fixed">
+        <origin xyz="0 0 0.1975" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="bottom_drawer" />
+    </joint>
+
+    <!-- joint: base -> middle_drawer -->
+    <joint name="base_to_middle_drawer" type="fixed">
+        <origin xyz="0 0 0.385" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="middle_drawer" />
+    </joint>
+
+    <!-- joint: base -> top_drawer -->
+    <joint name="base_to_top_drawer" type="fixed">
+        <origin xyz="0 0 0.5775" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_drawer" />
+    </joint>
+
+    <!-- joint: base -> top_drawer_divider -->
+    <joint name="base_to_top_drawer_divider" type="fixed">
+        <origin xyz="0 0 0.67375" rpy="0 0 0" />
+        <parent link="base" />
+        <child link="top_drawer_divider" />
+    </joint>
+
+    <!-- joint: bottom_drawer -> bottom_drawer_hinge -->
+    <joint name="bottom_drawer_to_bottom_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0 0" rpy="1.57 0 0" />
+        <parent link="bottom_drawer" />
+        <child link="bottom_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: middle_drawer -> middle_drawer_hinge -->
+    <joint name="middle_drawer_to_middle_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0 0" rpy="1.57 0 0" />
+        <parent link="middle_drawer" />
+        <child link="middle_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: top_drawer -> top_right_drawer_hinge -->
+    <joint name="top_drawer_to_top_right_drawer_hinge" type="continuous">
+        <origin xyz="0.23 0.1175 0" rpy="1.57 0 0" />
+        <parent link="top_drawer" />
+        <child link="top_right_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: top_drawer -> top_left_drawer_hinge -->
+    <joint name="top_drawer_to_top_left_drawer_hinge" type="continuous">
+        <origin xyz="0.23 -0.1175 0" rpy="1.57 0 0" />
+        <parent link="top_drawer" />
+        <child link="top_left_drawer_hinge" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- joint: bottom_drawer_hinge -> bottom_drawer_door -->
+    <joint name="bottom_drawer_hinge_to_bottom_drawer_door" type="fixed">
+        <origin xyz="0 0.08625 0" rpy="0 0 0" />
+        <parent link="bottom_drawer_hinge" />
+        <child link="bottom_drawer_door" />
+    </joint>
+
+    <!-- joint: middle_drawer_hinge -> middle_drawer_door -->
+    <joint name="middle_drawer_hinge_to_middle_drawer_door" type="fixed">
+        <origin xyz="0 0.091 0" rpy="0 0 0" />
+        <parent link="middle_drawer_hinge" />
+        <child link="middle_drawer_door" />
+    </joint>
+
+    <!-- joint: top_right_drawer_hinge -> top_right_drawer_door -->
+    <joint name="top_right_drawer_hinge_to_top_right_drawer_door" type="fixed">
+        <origin xyz="0 0.0935 0" rpy="0 0 0" />
+        <parent link="top_right_drawer_hinge" />
+        <child link="top_right_drawer_door" />
+    </joint>
+
+    <!-- joint: top_left_drawer_hinge -> top_left_drawer_door -->
+    <joint name="top_left_drawer_hinge_to_top_left_drawer_door" type="fixed">
+        <origin xyz="0 0.0935 0" rpy="0 0 0" />
+        <parent link="top_left_drawer_hinge" />
+        <child link="top_left_drawer_door" />
+    </joint>
+
+    <!-- joint: top_wall -> screen_base -->
+    <joint name="top_wall_to_screen_base" type="continuous">
+        <origin xyz="0 0 0.02" rpy="0 0 0" />
+        <parent link="top_wall" />
+        <child link="screen_base" />
+        <axis xyz="0 0 1" />
+    </joint>
+    
+    <!-- joint: screen_base -> screen -->
+    <joint name="screen_base_to_screen" type="fixed">
+        <origin xyz="0.20 0 0.07" rpy="0 -0.35 0" />
+        <parent link="screen_base" />
+        <child link="screen" />
+    </joint>
+
+    <gazebo>
+        <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <odometryRate>20.0</odometryRate>
+            <robotBaseFrame>base_link</robotBaseFrame>
+        </plugin>
+    </gazebo>
+</robot>
