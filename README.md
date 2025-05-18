@@ -1,3 +1,5 @@
+# VEJA A WIKI DESSE REPOSITÓRIO PARA VER A DOCUMENTAÇÃO DO ROBÔ
+
 ## Os próximos comandos são executados fora do Docker
 
 Rodando o ambiente ROS
