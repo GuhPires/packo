@@ -64,3 +64,13 @@ ex:
 code serve-web --host 0.0.0.0 --port 80 --without-connection-token --accept-server-license-terms
 
 ```
+
+## Executando simulação
+
+```bash
+docker exec -it ros-env bash
+source /opt/ros/humble/setup.bash
+colcon build
+source install/setup.bash
+ros2 launch packo_description robot.launch.py
+```
